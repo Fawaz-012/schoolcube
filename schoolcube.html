@@ -3,38 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SchoolCube is Nigeria's premium school management software — consolidating reports, academic records, messaging, and fee collection into one secure suite.">
     <title>SchoolCube - School Management</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="navbar">
-        <img src="img/logo.png" class="logo" alt="logo">
-        <ul class="nav-links">
+    <nav class="navbar">
+        <img src="img/logo.png" class="logo" alt="SchoolCube logo">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-links" id="navLinks">
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact Us</a></li>
-            <li><a href="#" class="suite-btn">SchoolRevs Suite</a></li>
+            <li><a href="#">SchoolRevs Suite</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="hero">
+    <header class="hero">
         <div class="hero-text">
-            <h1>School<br>Management</h1>
-            <h2>Made for you</h2>
+            <h1>School Information Management System</h1>
+            <h2>made for you!</h2>
             <p>All aspects of your school management consolidated into a single secure suite.</p>
             <a href="#" class="btn">Start Free Trial</a>
         </div>
         <div class="hero-image">
-            <img src="img/boy.png" alt="student">
+            <img src="img/boy.png" alt="Student using SchoolCube platform">
         </div>
-    </div>
+    </header>
 
     <!-- our schools -->
-    <div class="schools">
+    <section class="schools">
         <p class="schools-title">OUR SCHOOLS</p>
         <div class="school-logos">
             <img src="img/jesuit.png" alt="Jesuit College">
@@ -44,74 +48,63 @@
             <img src="img/love.png" alt="Love Academy">
             <img src="img/dcc.png" alt="DCC Schools">
         </div>
-    </div>
+    </section>
 
-    <div class="features">
+    <section class="features">
         <h2 class="features-title">Put Your School Ahead Of Others</h2>
-        <p class="features-sub">Increase the efficiency of your school by eliminating manual management tasks, which are prone to errors.</p>
+        <p class="features-sub">Increase the efficiency of your school by eliminating manual management tasks, <br> which are prone to errors.</p>
 
         <div class="top-cards">
             <div class="card1">
-                <h3>Reports and Analysis</h3>
-                <p>Schoolcube portal provides simplified reports and analysis with tables and charts. Thus enhancing effective resource management.</p>
-                <img src="img/report.png" alt="reports">
+                <h3 class="card-report">Reports and Analysis</h3>
+                <p class="text-sub">Schoolcube portal provides simplified reports and analysis with tables and charts. Thus enhancing effective resource management.</p>
+                <img src="img/report.png" alt="Sample reports and analysis screen">
             </div>
             <div class="card2">
-                <h3>Academic Records Management</h3>
-                <p>Track and analyse students academic history via class and subject attendance, charts, score cards and transcripts.</p>
-                <img src="img/acad.png" alt="academic">
+                <h3 class="card-academic">Academic Records Management</h3>
+                <p class="text-sub">Track and analyse students academic history via class and subject attendance, charts, score cards and transcripts.</p>
+                <img src="img/acad.png" alt="Sample academic records screen">
             </div>
         </div>
 
-        <div class="card3">
-            <div class="card3-content">
-                <div>
-                    <h3>Instant Messaging and Notifications</h3>
-                    <p>Schoolcube helps you manage communication between staff, students, and their parents via SMS, Email and Newsletters.</p>
-                </div>
-            </div>
+       <div class="card3">
+    <div class="card3-content">
+        <div>
+            <h3 class="card-academic1">Instant Messaging and Notifications</h3>
+            <p class="text-sub1">Schoolcube helps you manage communication between staff, students, and their parents via SMS, Email and Newsletters.</p>
         </div>
+        <img src="img/instant.svg" alt="Paper airplane illustration representing instant messaging">
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+    <div class="how-left">
+        <h2><span class="blue">How</span> Schoolcube <br> Works</h2>
+        <p class="how-intro">Actively Engage Parents and Staff via bulk short messaging service (SMS), Emails, Newsletters, Internal Memo and Live Chat.</p>
     </div>
 
-    <div class="how-it-works">
-        <div class="how-left">
-            <h2><span class="blue">How Schoolcube</span> Works</h2>
-
-            <div class="step">
-                <div>
-                    <h4>Engage Parents & Staff</h4>
-                    <p>Actively Engage Parents and Staff via bulk SMS, Emails, Newsletters, Internal Memo and Live Chat.</p>
-                </div>
-            </div>
-
-            <div class="step">
-                <div>
-                    <h4>Precision</h4>
-                    <p>Schoolcube portal is highly customizable with custom grading structures and accurate computations.</p>
-                </div>
-            </div>
-
-            <div class="step">
-                <div>
-                    <h4>Fees Payment and Collections</h4>
-                    <p>Utilise our financial solutions such as student wallets, staff payroll, receipt/voucher generator and more.</p>
-                </div>
-            </div>
-
-            <div class="step">
-                <div>
-                    <h4>Secure and Reliable Storage</h4>
-                    <p>Effectively manage access levels on schoolcube portal hosted on the most robust and secured cloud systems.</p>
-                </div>
-            </div>
+    <div class="how-right">
+        <div class="step">
+            <h4>Precision</h4>
+            <p>Schoolcube portal is highly customizable with custom grading structures and accurate computations.</p>
         </div>
-        <div class="how-right">
-            <img src="img/boy.png" alt="schoolcube">
+
+        <div class="step">
+            <h4>Fees Payment and Collections</h4>
+            <p>Utilise our financial solutions such as students wallets, staff accounts, staff payroll/pay-slips, receipt/voucher generator among others.</p>
+        </div>
+
+        <div class="step">
+            <h4>Secure and Reliable Storage</h4>
+            <p>Effectively manage access levels on schoolcube portal hosted on the most robust, reliable and secured cloud systems.</p>
         </div>
     </div>
+</section>
 
     <!-- partners -->
-    <div class="partners">
+    <section class="partners">
         <p class="partners-title">PARTNERS</p>
         <div class="partner-logos">
             <img src="img/google (3).png" alt="Google">
@@ -120,19 +113,18 @@
             <img src="img/monnify (3).png" alt="Monnify">
             <img src="img/aws (3).png" alt="AWS">
         </div>
-    </div>
+    </section>
 
-    <div class="cta">
+    <section class="cta">
         <h2>Experience the ease with</h2>
         <h2 class="blue">SchoolCube</h2>
         <p>We've done it carefully and simply. Everything combined to make school management beautiful.</p>
         <a href="#" class="btn">Get Started</a>
-    </div>
+    </section>
 
-    <div class="footer">
+    <footer class="footer">
         <div class="footer-top">
             <div class="footer-about">
-                <img src="img/logo.png" alt="SchoolCube">
                 <p>Nigeria's premium school management software. Simplifying education, one school at a time.</p>
             </div>
             <div class="footer-info">
@@ -153,14 +145,14 @@
         </div>
 
         <div class="footer-bottom">
-            <p>Copyright &copy; 2024 Revocube SchoolRevs. All Rights Reserved</p>
+            <p>Copyright &copy; 2026 Revocube SchoolRevs. All Rights Reserved</p>
             <div class="socials">
-                <a href="https://www.instagram.com/schoolcube" target="_blank">Instagram</a>
-                <a href="https://www.facebook.com/schoolcubeportal" target="_blank">Facebook</a>
-                <a href="https://twitter.com/schoolcube" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com/schoolcube" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/schoolcubeportal" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com/schoolcube" target="_blank" rel="noopener">Twitter</a>
             </div>
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>

@@ -13,11 +13,12 @@ a {
     text-decoration: none;
 }
 
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 8%;
+    padding: 20px 8%;
     background: #ffffff;
     position: sticky;
     top: 0;
@@ -26,57 +27,74 @@ a {
 }
 
 .logo {
-    width: 180px;
+    width: 170px;
 }
 
-.nav-links {
+.navbar-links {
     display: flex;
     list-style: none;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 }
 
-.nav-links a {
-    color: #000000;
+.navbar-links a {
+    color: #1a1a1a;
     font-size: 17px;
-    font-weight: 500;
-    padding: 10px 15px;
+    font-weight: 400;
+    padding: 10px 20px;
+    transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.navbar-links a:hover,
+.navbar-links a:focus-visible {
     color: #0083ff;
 }
 
-.nav-links a.active {
+.navbar-links a.active {
     color: #0083ff;
 }
 
-.suite-btn {
-    background: #0083ff;
-    color: #ffffff !important;
-    border-radius: 5px;
-    padding: 10px 18px !important;
+/* Mobile nav toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    gap: 5px;
 }
+
+.nav-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #071e57;
+    border-radius: 2px;
+}
+
 
 .hero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 100px 8%;
     gap: 40px;
-    background: linear-gradient(to right, #e3efff, #f4f8ff, #fbfcff, #effff5);
+        background: linear-gradient(to right, #f4f8ff, #f8fbff, #fcfdff, #feffff, #ffffff, #fbfffc);
 }
 
 .hero-text {
-    max-width: 500px;
+    max-width: 560px;
 }
 
 .hero-text h1 {
     font-family: 'DM Sans', sans-serif;
-    font-size: 56px;
     font-weight: 700;
     color: #0083ff;
-    line-height: 1.3;
+    font-size: 44px;
+    line-height: 1.25;
+    max-width: 480px;
+
 }
 
 .hero-text h2 {
@@ -92,9 +110,22 @@ a {
     margin-top: 16px;
 }
 
-.hero-image img {
-    width: 100%;
+.hero-image {
+    max-width: 380px;
 }
+
+
+.hero-image img{
+      width: 100%;
+    height: 499px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 
 .btn {
     display: inline-block;
@@ -107,12 +138,19 @@ a {
     margin-top: 20px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
     opacity: 0.85;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #0083ff;
+    outline-offset: 2px;
+}
+
+
 .schools {
-    background: #ffffff;
     padding: 40px 8%;
     text-align: center;
 }
@@ -120,7 +158,7 @@ a {
 .schools-title {
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
-    color: #c5c5c5;
+    color: #8a8a8a;
     letter-spacing: 5px;
     margin-bottom: 30px;
 }
@@ -135,27 +173,34 @@ a {
 
 .school-logos img {
     width: 120px;
-    padding: 10px;
+    padding: 10px 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .features {
-    background: linear-gradient(to bottom right, #e3efff, #fafdff, #f8fffb, #ffffff);
     padding: 60px 8%;
 }
 
 .features-title {
+    text-align: center;
     font-family: 'DM Sans', sans-serif;
     font-size: 48px;
-    font-weight: 700;
     color: #071e57;
-    text-align: center;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
 .features-sub {
-    font-size: 20px;
     text-align: center;
-    margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 50px;
 }
 
 .top-cards {
@@ -174,14 +219,6 @@ a {
     overflow: hidden;
 }
 
-.card1 h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #071e57;
-    margin-bottom: 16px;
-}
-
 .card2 {
     flex: 1;
     background: rgba(234, 255, 248, 0.75);
@@ -192,28 +229,14 @@ a {
     overflow: hidden;
 }
 
-.card2 h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #01a23c;
-    margin-bottom: 16px;
-}
-
 .card3 {
     background: #fffbf5;
     border: 1px solid #ffd799;
     border-radius: 20px;
     padding: 40px;
+    overflow: hidden;
 }
 
-.card3 h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #f89101;
-    margin-bottom: 16px;
-}
 
 .card3-content {
     display: flex;
@@ -224,10 +247,53 @@ a {
 
 .card3-content img {
     width: 45%;
+    margin-bottom: -40px;     
+    align-self: flex-end;
 }
 
-.card1 p, .card2 p, .card3 p {
+.card-report {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #071e57;
+    text-align: start;
+    font-style: normal;
+    line-height: 36px;
+}
+
+.card-academic {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #01a23c;
+    text-align: start;
+    margin-top: 0px;
+    margin-left: 0px;
+    line-height: 36px;
+}
+
+.text-sub {
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
+    color: #000000;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card-academic1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #f89101;
+    padding-left: 2%;
+}
+
+.text-sub1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    font-weight: normal;
+    padding-left: 2%;
 }
 
 .card1 img, .card2 img {
@@ -235,12 +301,12 @@ a {
     margin-top: 30px;
 }
 
+
 .how-it-works {
     display: flex;
-    align-items: center;
+    align-items: center;    
     gap: 60px;
     padding: 60px 8%;
-    background: linear-gradient(to right, #e3efff, #f4f8ff, #fbfcff, #effff5);
 }
 
 .how-left {
@@ -259,19 +325,24 @@ a {
     color: #0083ff;
 }
 
-.step {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    background: #f9faff;
-    border-radius: 10px;
-    padding: 16px;
-    margin-top: 20px;
+.how-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #000000;
+    margin-top: 16px;
 }
 
-.step img {
-    width: 35px;
-    height: 35px;
+.how-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    background: #f9faff;
+    border-radius: 10px;
+    padding: 24px;
 }
 
 .step h4 {
@@ -280,22 +351,6 @@ a {
     color: #0083ff;
     margin-bottom: 6px;
 }
-
-.step p {
-    font-size: 16px;
-}
-
-.how-right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.how-right img {
-    width: 100%;
-    max-width: 400px;
-}
-
 .partners {
     background: #ffffff;
     padding: 40px 8%;
@@ -305,7 +360,7 @@ a {
 .partners-title {
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
-    color: #c5c5c5;
+    color: #8a8a8a;
     letter-spacing: 5px;
     margin-bottom: 30px;
 }
@@ -330,8 +385,8 @@ a {
     filter: grayscale(0%);
 }
 
+
 .cta {
-    background: linear-gradient(to bottom right, #e3efff, #fafdff, #f8fffb, #ffffff);
     padding: 80px 8%;
     text-align: center;
 }
@@ -348,7 +403,7 @@ a {
     margin: 16px 0 30px;
 }
 
-/* footer */
+
 .footer {
     background: #ffffff;
     border-top: 1px solid #e7e5ea;
@@ -384,7 +439,7 @@ a {
 
 .footer-info h4 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color: #424242;
     margin-bottom: 12px;
 }
@@ -426,11 +481,15 @@ a {
     color: #0083ff;
 }
 
-/* responsive */
+
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
         padding: 60px 6%;
+    }
+
+    .hero-text h1 {
+        max-width: 100%;
     }
 
     .top-cards {
@@ -461,5 +520,33 @@ a {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+        transition: max-height 0.25s ease;
+    }
+
+    .navbar-links.open {
+        max-height: 400px;
+    }
+
+    .navbar-links a {
+        width: 100%;
+        padding: 16px 8%;
     }
 }
